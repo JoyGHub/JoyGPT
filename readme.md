@@ -21,15 +21,19 @@ Before running JoyGPT, ensure you have the following installed on your system:
 1. **Clone the Repository**
    ```sh
    git clone -b main https://github.com/JoyGHub/JoyGPT.git
+   ```
+
+2. **Enter the cloned directory**
+   ```sh
    cd joygpt
    ```
 
-2. **Install Dependencies**
+3. **Install Dependencies**
    ```sh
    npm install
    ```
 
-3. **Start the Application**
+4. **Start the Application**
    ```sh
    npm start
    ```
