@@ -1,0 +1,144 @@
+.input {
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input:focus+.input-border {
+  width: 100%;
+}
+
+.prompt-input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  --width-of-input: 300px;
+  background-color: #121212;
+}
+
+.prompt-input {
+  width: 100%;
+}
+
+.input-alt {
+  width: 100%;
+  font-size: 1.2rem;
+  padding-inline: 1em;
+  padding-block: 0.8em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-border-alt {
+  height: 3px;
+  background: linear-gradient(90deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
+  transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+}
+
+.input-alt:focus+.input-border-alt {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mic-input {
+  padding: 0px 10px 10px 0px;
+}
+
+.switch {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(60, 64, 67);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mic-on,
+.mic-off {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  inset: 0;
+}
+
+.mic-on {
+  z-index: 2;
+  opacity: 1;
+}
+
+.mic-off {
+  z-index: 3;
+  opacity: 1;
+}
+
+#checkbox:checked + .switch .mic-off {
+  opacity: 0;
+}
+
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 10px rgb(238, 12, 12), 0 0 20px rgb(238, 12, 12), 0 0 30px rgba(238, 12, 12, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgb(238, 12, 12), 0 0 40px rgb(238, 12, 12), 0 0 60px rgba(238, 12, 12, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgb(238, 12, 12), 0 0 20px rgb(238, 12, 12), 0 0 30px rgba(238, 12, 12, 0.8);
+  }
+}
+
+#checkbox:checked + .switch {
+  background-color: rgb(238, 12, 12);
+  /* animation: neon-glow 1.5s infinite ease-in-out; */
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:active+.switch {
+  scale: 1.2;
+}
