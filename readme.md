@@ -25,7 +25,7 @@ Before running JoyGPT, ensure you have the following installed on your system:
 
 2. **Enter the cloned directory**
    ```sh
-   cd joygpt
+   cd JoyGPT
    ```
 
 3. **Install Dependencies**
@@ -47,11 +47,30 @@ Once the app is running, follow these steps to set up and use an LLM:
    - Download and install Ollama from their official website: [ollama.com](https://ollama.com/).
    - Follow the installation instructions for your operating system.
 
-2. **Download a Model**
+2. **Download a Model via UI**
    - Open JoyGPT in your browser.
    - Enter the name of the LLM you want to install (e.g., `llama3.3`, `llama3.2`, `gemma:7b`, `deepseek-r1:7b`) into the input field.
    - Click the "Install Model" button.
    - The app will download and install the model for you.
+
+3. **Download a Model via Terminal**
+   - You can also download, delete and use Models via a terminal (Command Prompt / Windows Powershell) by using the following commands:
+	 - Show all commands:
+	  ```sh
+   		ollama help
+   	```
+	 - Pull (download) a model:
+	  ```sh
+   		ollama pull llama3.2
+   	```
+	 - Delete a model:
+	  ```sh
+   		ollama rm llama3.2
+   	```
+	 - Run a model:
+	  ```sh
+   		ollama run llama3.2
+   	```
 
 ### Example Model Names
 Some popular model names you can try installing (as of January 2025):
