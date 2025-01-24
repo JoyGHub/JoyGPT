@@ -34,9 +34,8 @@ Before running JoyGPT, ensure you have the following installed on your system:
    ```
 
 4. **Start the Application**
-   ```sh
-   npm start
-   ```
+   Run **start_app.bat**. This will open two terminals. One for the UI, one for the backend.
+
    The application should automatically open in your default web browser at `http://localhost:3000`.
 
 ### Setting Up Large Language Models (LLMs)
