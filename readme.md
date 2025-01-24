@@ -1,66 +1,81 @@
-Here are suggestions to improve the JoyGPT application:
+# JoyGPT
 
-Error Handling
+JoyGPT is a local web application built with StencilJS that allows users to interact offline with large language models (LLMs) via a simple and intuitive UI. Users can install and manage LLMs directly from the application using [Ollama](https://ollama.com/), a tool for running local language models.
 
+## Features
+- Simple and responsive UI to interact with local LLMs.
+- Easy installation of models via the app interface.
+- Built with StencilJS for fast and lightweight performance.
 
-Implement more robust error handling for API calls
-Add user-friendly error messages
-Create fallback mechanisms for network issues
+## Getting Started
 
+### Prerequisites
+Before running JoyGPT, ensure you have the following installed on your system:
 
-UI/UX Enhancements
+- [Node.js](https://nodejs.org/) (recommended LTS version)
+- [NPM](https://www.npmjs.com/) (comes with Node.js)
+- [Ollama](https://ollama.com/) (for running local language models)
 
+### Installation Steps
 
-Add loading indicators during message generation
-Implement message scrolling to always show latest messages
-Create a clear chat/reset conversation button
-Add syntax highlighting for code blocks
-Implement responsive design for mobile devices
+1. **Clone the Repository**
+   ```sh
+   git clone -b main https://github.com/JoyGHub/JoyGPT.git
+   cd joygpt
+   ```
 
+2. **Install Dependencies**
+   ```sh
+   npm install
+   ```
 
-Features
+3. **Start the Application**
+   ```sh
+   npm start
+   ```
+   The application should automatically open in your default web browser at `http://localhost:3000`.
 
+### Setting Up Large Language Models (LLMs)
 
-Add ability to edit/regenerate previous messages
-Implement message pinning or favoriting
-Create conversation export functionality
-Add support for file uploads
-Implement multi-language support
+Once the app is running, follow these steps to set up and use an LLM:
 
+1. **Install Ollama**
+   - Download and install Ollama from their official website: [ollama.com](https://ollama.com/).
+   - Follow the installation instructions for your operating system.
 
-Performance Optimization
+2. **Download a Model**
+   - Open JoyGPT in your browser.
+   - Enter the name of the LLM you want to install (e.g., `llama3.3`, `llama3.2`, `gemma:7b`, `deepseek-r1:7b`) into the input field.
+   - Click the "Install Model" button.
+   - The app will download and install the model for you.
 
+### Example Model Names
+Some popular model names you can try installing (as of January 2025):
 
-Implement message caching
-Add pagination or virtual scrolling for chat history
-Optimize API request handling
-Implement rate limiting
+- `llama3.3`
+- `llama3.2`
+- `gemma:7b`
+- `mistral`
+- `deepseek-r1:7b`
 
+### Verifying Installation
+Once the model is installed successfully, you can select it via the app interface.
 
-AI Model Management
+## Troubleshooting
 
+If you encounter any issues:
+- Ensure Ollama is properly installed and running.
+- Check your internet connection when downloading models.
+- Review the browser console for any errors related to the app.
 
-Allow custom Ollama model configuration
-Add model comparison features
-Implement model performance metrics
-Create model download/management interface
+## Contributing
 
+We welcome contributions! Feel free to submit pull requests or report issues on our GitHub repository.
 
-Security
+## License
 
+This project is licensed under the MIT License.
 
-Add token/rate limiting
-Implement input sanitization
-Create optional user authentication
-Add privacy controls for chat history
+---
 
-
-Advanced Interaction
-
-
-Implement context-aware message suggestions
-Add voice input/output capabilities
-Create markdown/code editing support
-Implement inline code execution (with safety measures)
-
-Would you like me to elaborate on any of these suggestions?
+Enjoy using JoyGPT!
