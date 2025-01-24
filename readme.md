@@ -54,23 +54,28 @@ Once the app is running, follow these steps to set up and use an LLM:
    - The app will download and install the model for you.
 
 3. **Download a Model via Terminal**
-   - You can also download, delete and use Models via a terminal (Command Prompt / Windows Powershell) by using the following commands:
-	 - Show all commands:
-	  ```sh
-   		ollama help
-   	```
-	 - Pull (download) a model:
-	  ```sh
-   		ollama pull llama3.2
-   	```
-	 - Delete a model:
-	  ```sh
-   		ollama rm llama3.2
-   	```
-	 - Run a model:
-	  ```sh
-   		ollama run llama3.2
-   	```
+
+   You can also download, delete, and use models via the terminal (Command Prompt / Windows PowerShell) by using the following commands:
+
+   - **Show all available commands:**
+     ```sh
+     ollama help
+     ```
+   
+   - **Pull (download) a model:**
+     ```sh
+     ollama pull llama3.2
+     ```
+   
+   - **Delete a model:**
+     ```sh
+     ollama rm llama3.2
+     ```
+   
+   - **Run a model:**
+     ```sh
+     ollama run llama3.2
+     ```
 
 ### Example Model Names
 Some popular model names you can try installing (as of January 2025):
