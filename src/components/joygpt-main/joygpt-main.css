@@ -75,7 +75,7 @@ main {
   cursor: pointer;
 }
 
-.add-model-icon path{
+.add-model-icon path {
   fill: white;
 }
 
@@ -227,7 +227,7 @@ pre[class*="language-"] {
 .ollama-inactive-modal {
   color: white;
   background-color: #181818;
-  width: 600px;
+  width: fit-content;
   height: fit-content;
   border-radius: 20px;
   padding: 25px;
@@ -241,7 +241,9 @@ pre[class*="language-"] {
 
 
 
-.loader, .loader:before, .loader:after {
+.loader,
+.loader:before,
+.loader:after {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
@@ -276,10 +278,18 @@ pre[class*="language-"] {
 }
 
 @keyframes bblFadInOut {
-  0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
-  40% { box-shadow: 0 2.5em 0 0 }
+
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em
+  }
+
+  40% {
+    box-shadow: 0 2.5em 0 0
+  }
 }
-    
+
 
 .progress-container {
   margin-top: 20px;
@@ -295,4 +305,98 @@ progress {
   text-align: center;
   margin-top: 5px;
   font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.models-table {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.table-header,
+.table-row {
+  display: contents;
+}
+
+.table-header>div {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.table-row>div {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-row>div>svg {
+  cursor: pointer;
+}
+
+.confirmation-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(13, 13, 13);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Model Management Modal */
+.model-management-modal-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.model-management-modal-header h1 {
+  margin: 0;
+}
+
+.model-management-modal-header svg {
+  cursor: pointer;
+}
+
+.download-model input {
+  color: white;
+  background-color: #1e1e1e;
+  font-size: 16px;
+  width: 220px;
+  padding: 0.75em;
+  border-radius: 20px;
+  border: none;
+}
+
+.download-model button {
+  margin-left: 20px;
+  color: #1e1e1e;
+  background-color: white;
+  font-size: 16px;
+  width: 100px;
+  padding: 0.75em;
+  border-radius: 20px;
+  border: none;
 }
